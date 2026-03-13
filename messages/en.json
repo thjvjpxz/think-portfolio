@@ -1,0 +1,87 @@
+{
+  "Navbar": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "hireMe": "Hire Me"
+  },
+  "Hero": {
+    "greeting": "Hi, I am Nguyễn Kim Thi",
+    "headline": "Engineering",
+    "words": ["Backend Developer", "Java Spring Boot", "Laravel PHP", "Problem Solver"],
+    "description": "Crafting robust backends and scalable architectures. Specializing in high-performance Java and PHP systems with a focus on clean code and technical excellence.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "terminalBranch": "On branch master",
+    "terminalUpToDate": "Your branch is up to date with 'origin/master'."
+  },
+  "About": {
+    "title": "About Me",
+    "p1": "I am a passionate <strong>Backend Developer</strong> with a rigorous focus on building efficient, secure, and scalable server-side applications. My approach combines engineering precision with creative problem-solving.",
+    "p2": "Having worked with industry leaders like <brand>Kaopiz Software</brand> and <brand>Ngân Giang Technology</brand>, I've honed my skills in modernizing legacy systems and architecting new solutions from the ground up.",
+    "p3": "I thrive in environments that challenge technical boundaries, whether it's optimizing complex database queries or implementing advanced image retrieval algorithms.",
+    "stats": {
+      "experience": "Professional Experience",
+      "projects": "Projects Completed",
+      "gpa": "University GPA",
+      "degree": "Degree Class"
+    }
+  },
+  "Experience": {
+    "title": "Work Experience",
+    "kaopiz": {
+      "role": "Backend Developer",
+      "company": "Kaopiz Software",
+      "description": "Contributing to high-scale backend services and system architecture. Implementing robust APIs and ensuring seamless integration between services."
+    },
+    "nganGiang": {
+      "role": "Software Intern",
+      "company": "Ngân Giang Technology",
+      "description": "Focused on SIFMES project development. Specialized in C# SOAP services and 3D Point Cloud data analysis, contributing to precision engineering software."
+    }
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "teamLead": "Team Lead",
+    "manga": {
+      "title": "Smart Manga Platform",
+      "description": "An intelligent comic reader platform featuring OCR for text extraction and Text-to-Speech integration. Built with Spring Boot for the core engine and Next.js for a seamless frontend experience."
+    },
+    "imageRetrieval": {
+      "title": "Texture-Based Image Retrieval",
+      "description": "Content-based image retrieval system using Gabor filters for texture analysis. Led a team of developers to implement efficient search algorithms in C#."
+    }
+  },
+  "Skills": {
+    "title": "Technical Arsenal",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "tools": "Tools & Infra"
+  },
+  "Education": {
+    "title": "Education",
+    "university": "Thuỷ Lợi University",
+    "degree": "Bachelor of Information Systems",
+    "badge": "Graduated with Distinction",
+    "gpa": "GPA: 3.27 / 4.0",
+    "scholarship": "Excellence Scholarship Recipient"
+  },
+  "Contact": {
+    "title": "Get In Touch",
+    "description": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+    "emailLabel": "Email Me",
+    "githubLabel": "GitHub",
+    "nameLabel": "Name",
+    "namePlaceholder": "John Doe",
+    "emailFieldLabel": "Email",
+    "emailPlaceholder": "john@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Your message...",
+    "send": "Send Message"
+  },
+  "Footer": {
+    "copyright": "© 2024 Nguyễn Kim Thi. All rights reserved. Built with precision.",
+    "env": "ENVIRONMENT: PRODUCTION"
+  }
+}
