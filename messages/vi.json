@@ -4,7 +4,10 @@
     "experience": "Kinh nghiệm",
     "projects": "Dự án",
     "skills": "Kỹ năng",
-    "hireMe": "Liên hệ"
+    "hireMe": "Liên hệ",
+    "openMenu": "Mở menu điều hướng",
+    "closeMenu": "Đóng menu điều hướng",
+    "navigationAria": "Điều hướng chính"
   },
   "Hero": {
     "greeting": "Xin chào, tôi là Nguyễn Kim Thi",
@@ -13,64 +16,37 @@
       "Backend Developer",
       "Java Spring Boot",
       "Laravel PHP",
-      "Giải quyết vấn đề"
+      "Cake PHP"
     ],
-    "description": "Xây dựng backend vững chắc và kiến trúc có khả năng mở rộng. Chuyên về hệ thống Java và PHP hiệu suất cao với trọng tâm là code sạch và xuất sắc kỹ thuật.",
+    "description": "Xây dựng backend vững chắc và kiến trúc mở rộng theo nhu cầu sản phẩm. Chuyên về Java, PHP và FastAPI hiệu suất cao với trọng tâm là clean code, API rõ ràng và kỷ luật kỹ thuật.",
     "viewProjects": "Xem dự án",
     "contactMe": "Liên hệ",
-    "terminalBranch": "Trên nhánh master",
-    "terminalUpToDate": "Nhánh của bạn đã cập nhật với 'origin/master'."
-  },
-  "About": {
-    "title": "Về tôi",
-    "p1": "Tôi là một <strong>Backend Developer</strong> đam mê, tập trung vào việc xây dựng các ứng dụng phía máy chủ hiệu quả, bảo mật và có khả năng mở rộng. Phương pháp của tôi kết hợp sự chính xác kỹ thuật với khả năng giải quyết vấn đề sáng tạo.",
-    "p2": "Đã làm việc với các công ty hàng đầu như <brand>Kaopiz Software</brand> và <brand>Ngân Giang Technology</brand>, tôi đã trau dồi kỹ năng hiện đại hóa hệ thống cũ và thiết kế giải pháp mới từ đầu.",
-    "p3": "Tôi phát triển mạnh trong môi trường thách thức giới hạn kỹ thuật, dù là tối ưu hóa truy vấn cơ sở dữ liệu phức tạp hay triển khai thuật toán truy xuất ảnh tiên tiến.",
-    "stats": {
-      "experience": "Kinh nghiệm làm việc",
-      "projects": "Dự án hoàn thành",
-      "gpa": "GPA Đại học",
-      "degree": "Xếp loại tốt nghiệp"
-    }
+    "terminalBranch": "On branch master",
+    "terminalUpToDate": "Your branch is up to date with 'origin/master'.",
+    "terminalTitle": "thjvjpxz — -zsh — 80x24",
+    "terminalName": "Nguyễn Kim Thi",
+    "terminalRole": "Kỹ sư Backend",
+    "terminalLocation": "Việt Nam",
+    "terminalSkill1": "Java",
+    "terminalSkill2": "Spring Boot",
+    "terminalSkill3": "Laravel",
+    "terminalSkill4": "Docker",
+    "highlights": [
+      { "label": "Năm kinh nghiệm", "value": "2+" },
+      { "label": "Dự án đã làm", "value": "12+" },
+      { "label": "Stack chính", "value": "Java · PHP" }
+    ]
   },
   "Experience": {
-    "title": "Kinh nghiệm làm việc",
-    "kaopiz": {
-      "role": "Backend Developer",
-      "company": "Kaopiz Software",
-      "description": "Đóng góp vào các dịch vụ backend quy mô lớn và kiến trúc hệ thống. Triển khai API mạnh mẽ và đảm bảo tích hợp liền mạch giữa các dịch vụ."
-    },
-    "nganGiang": {
-      "role": "Thực tập sinh phần mềm",
-      "company": "Ngân Giang Technology",
-      "description": "Tập trung phát triển dự án SIFMES. Chuyên về dịch vụ C# SOAP và phân tích dữ liệu 3D Point Cloud, đóng góp vào phần mềm kỹ thuật chính xác."
-    }
+    "entryLabel": "Cột mốc",
+    "current": "Hiện tại",
+    "previous": "Trước đó"
   },
   "Projects": {
-    "title": "Dự án nổi bật",
-    "teamLead": "Trưởng nhóm",
-    "manga": {
-      "title": "Nền tảng Manga thông minh",
-      "description": "Nền tảng đọc truyện tranh thông minh với OCR trích xuất văn bản và tích hợp Text-to-Speech. Xây dựng bằng Spring Boot cho engine cốt lõi và Next.js cho trải nghiệm frontend mượt mà."
-    },
-    "imageRetrieval": {
-      "title": "Truy xuất ảnh theo kết cấu",
-      "description": "Hệ thống truy xuất ảnh dựa trên nội dung sử dụng bộ lọc Gabor để phân tích kết cấu. Dẫn dắt nhóm lập trình viên triển khai thuật toán tìm kiếm hiệu quả bằng C#."
-    }
-  },
-  "Skills": {
-    "title": "Kho vũ khí kỹ thuật",
-    "languages": "Ngôn ngữ",
-    "frameworks": "Frameworks",
-    "tools": "Công cụ & Hạ tầng"
-  },
-  "Education": {
-    "title": "Học vấn",
-    "university": "Đại học Thuỷ Lợi",
-    "degree": "Cử nhân Hệ thống Thông tin",
-    "badge": "Tốt nghiệp Xuất sắc",
-    "gpa": "GPA: 3.27 / 4.0",
-    "scholarship": "Nhận học bổng Xuất sắc"
+    "projectPreview": "Tổng quan dự án",
+    "techStack": "Công nghệ",
+    "viewCaseStudy": "Xem Case Study",
+    "noPublicLink": "Không có link công khai"
   },
   "Contact": {
     "title": "Liên hệ",
@@ -83,10 +59,25 @@
     "emailPlaceholder": "example@gmail.com",
     "messageLabel": "Tin nhắn",
     "messagePlaceholder": "Nội dung tin nhắn...",
-    "send": "Gửi tin nhắn"
+    "send": "Gửi tin nhắn",
+    "sending": "Đang gửi...",
+    "successMessage": "Gửi tin nhắn thành công. Cảm ơn bạn, tôi sẽ phản hồi trong vòng 24-48 giờ.",
+    "errorTryAgain": "Hiện chưa thể gửi tin nhắn. Vui lòng thử lại sau vài phút.",
+    "errorRateLimited": "Bạn gửi quá nhiều lần. Vui lòng chờ vài phút rồi thử lại.",
+    "errorServiceUnavailable": "Dịch vụ liên hệ đang tạm gián đoạn. Vui lòng gửi email trực tiếp cho tôi.",
+    "errorCheckFields": "Vui lòng kiểm tra các trường đang báo lỗi.",
+    "nameRequired": "Vui lòng nhập họ tên của bạn.",
+    "emailRequired": "Vui lòng nhập địa chỉ email.",
+    "emailInvalid": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "messageRequired": "Vui lòng nhập nội dung tin nhắn.",
+    "messageMinLength": "Tin nhắn cần có ít nhất 10 ký tự."
   },
   "Footer": {
     "copyright": "© 2026 Nguyễn Kim Thi. Bảo lưu mọi quyền. Được xây dựng với sự tỉ mỉ.",
-    "env": "MÔI TRƯỜNG: PRODUCTION"
+    "quickLinks": "Liên kết nhanh",
+    "about": "Giới thiệu",
+    "projects": "Dự án",
+    "contact": "Liên hệ",
+    "backToTop": "Lên đầu trang"
   }
 }

@@ -7,19 +7,27 @@ import Skills from "@/app/components/Skills";
 import Education from "@/app/components/Education";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
+import { getPortfolioData } from "@/data";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const portfolioData = getPortfolioData(locale);
+
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
+        <About data={portfolioData.about} />
+        <Experience data={portfolioData.experience} />
+        <Projects data={portfolioData.projects} />
+        <Skills data={portfolioData.skills} />
+        <Education data={portfolioData.education} />
+        <Contact data={portfolioData.contact} />
       </main>
       <Footer />
     </>
