@@ -2,6 +2,17 @@
 
 Personal portfolio website built with Next.js 16, showcasing backend engineering experience, projects, and skills.
 
+## Table of contents
+
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Locales](#locales)
+- [Build](#build)
+- [CI/CD (GitHub Actions + Cloud Run)](#cicd-github-actions--cloud-run)
+- [License](#license)
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -130,3 +141,7 @@ After first deploy, set runtime secrets/env vars in Cloud Run service:
 
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
+
+## License
+
+This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
