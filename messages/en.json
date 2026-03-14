@@ -1,4 +1,10 @@
 {
+  "Metadata": {
+    "title": "Nguyen Kim Thi | Backend Developer Portfolio",
+    "description": "Backend Developer specializing in Java Spring Boot, Laravel PHP, Docker. Building high-performance backend systems and scalable architectures.",
+    "ogLocale": "en_US",
+    "jobTitle": "Backend Developer"
+  },
   "Navbar": {
     "about": "About",
     "experience": "Experience",

@@ -1,4 +1,10 @@
 {
+  "Metadata": {
+    "title": "Nguyễn Kim Thi | Backend Developer Portfolio",
+    "description": "Backend Developer chuyên về Java Spring Boot, Laravel PHP, Docker. Xây dựng hệ thống backend hiệu suất cao và kiến trúc có khả năng mở rộng.",
+    "ogLocale": "vi_VN",
+    "jobTitle": "Kỹ sư Backend"
+  },
   "Navbar": {
     "about": "Giới thiệu",
     "experience": "Kinh nghiệm",

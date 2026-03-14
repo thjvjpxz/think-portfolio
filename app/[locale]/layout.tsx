@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, DM_Sans, Space_Grotesk } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
 const dmSans = DM_Sans({
   variable: "--font-body",
@@ -26,11 +29,55 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Nguyễn Kim Thi | Backend Developer Portfolio",
-  description:
-    "Backend Developer chuyên về Java Spring Boot, Laravel PHP, Docker. Xây dựng hệ thống backend hiệu suất cao và kiến trúc có khả năng mở rộng.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+  const url = `${baseUrl}/${locale}`;
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: url,
+      languages: {
+        vi: `${baseUrl}/vi`,
+        en: `${baseUrl}/en`,
+      },
+    },
+    icons: {
+      icon: [{ url: "/favicon.ico", sizes: "any" }],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+      shortcut: ["/favicon.ico"],
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url,
+      siteName: "Nguyen Kim Thi Portfolio",
+      locale: t("ogLocale"),
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og-image.png"],
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
