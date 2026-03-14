@@ -1,13 +1,23 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
-import About from "@/app/components/About";
-import Experience from "@/app/components/Experience";
-import Projects from "@/app/components/Projects";
-import Skills from "@/app/components/Skills";
-import Education from "@/app/components/Education";
-import Contact from "@/app/components/Contact";
-import Footer from "@/app/components/Footer";
 import { getPortfolioData } from "@/data";
+
+const About = dynamic(() => import("@/app/components/About"), { ssr: true });
+const Experience = dynamic(() => import("@/app/components/Experience"), {
+  ssr: true,
+});
+const Projects = dynamic(() => import("@/app/components/Projects"), {
+  ssr: true,
+});
+const Skills = dynamic(() => import("@/app/components/Skills"), { ssr: true });
+const Education = dynamic(() => import("@/app/components/Education"), {
+  ssr: true,
+});
+const Contact = dynamic(() => import("@/app/components/Contact"), {
+  ssr: true,
+});
+const Footer = dynamic(() => import("@/app/components/Footer"), { ssr: true });
 
 export default async function HomePage({
   params,
