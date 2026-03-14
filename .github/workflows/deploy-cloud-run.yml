@@ -72,7 +72,9 @@ jobs:
         env:
           IMAGE: ${{ env.GCP_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REPOSITORY }}/${{ env.CLOUD_RUN_SERVICE }}:${{ github.sha }}
         run: |
-          docker build -t "$IMAGE" .
+          docker build -t "$IMAGE" \
+            --build-arg NEXT_PUBLIC_BASE_URL="${{ env.NEXT_PUBLIC_BASE_URL }}" \
+            .
           docker push "$IMAGE"
           echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
 
