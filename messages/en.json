@@ -4,68 +4,49 @@
     "experience": "Experience",
     "projects": "Projects",
     "skills": "Skills",
-    "hireMe": "Hire Me"
+    "hireMe": "Hire Me",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "navigationAria": "Primary navigation"
   },
   "Hero": {
-    "greeting": "Hi, I am Nguyễn Kim Thi",
+    "greeting": "Hi, I am Nguyen Kim Thi",
     "headline": "Engineering",
-    "words": ["Backend Developer", "Java Spring Boot", "Laravel PHP", "Problem Solver"],
-    "description": "Crafting robust backends and scalable architectures. Specializing in high-performance Java and PHP systems with a focus on clean code and technical excellence.",
+    "words": [
+      "Backend Developer",
+      "Java Spring Boot",
+      "Laravel PHP",
+      "Cake PHP"
+    ],
+    "description": "Building robust backends and product-scale architectures. Specializing in high-performance Java, PHP, and FastAPI systems with a focus on clean code, clear APIs, and engineering discipline.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "terminalBranch": "On branch master",
-    "terminalUpToDate": "Your branch is up to date with 'origin/master'."
-  },
-  "About": {
-    "title": "About Me",
-    "p1": "I am a passionate <strong>Backend Developer</strong> with a rigorous focus on building efficient, secure, and scalable server-side applications. My approach combines engineering precision with creative problem-solving.",
-    "p2": "Having worked with industry leaders like <brand>Kaopiz Software</brand> and <brand>Ngân Giang Technology</brand>, I've honed my skills in modernizing legacy systems and architecting new solutions from the ground up.",
-    "p3": "I thrive in environments that challenge technical boundaries, whether it's optimizing complex database queries or implementing advanced image retrieval algorithms.",
-    "stats": {
-      "experience": "Professional Experience",
-      "projects": "Projects Completed",
-      "gpa": "University GPA",
-      "degree": "Degree Class"
-    }
+    "terminalUpToDate": "Your branch is up to date with 'origin/master'.",
+    "terminalTitle": "thjvjpxz — -zsh — 80x24",
+    "terminalName": "Nguyen Kim Thi",
+    "terminalRole": "Backend Engineer",
+    "terminalLocation": "Vietnam",
+    "terminalSkill1": "Java",
+    "terminalSkill2": "Spring Boot",
+    "terminalSkill3": "Laravel",
+    "terminalSkill4": "Docker",
+    "highlights": [
+      { "label": "Years Experience", "value": "2+" },
+      { "label": "Projects Built", "value": "12+" },
+      { "label": "Core Stack", "value": "Java · PHP" }
+    ]
   },
   "Experience": {
-    "title": "Work Experience",
-    "kaopiz": {
-      "role": "Backend Developer",
-      "company": "Kaopiz Software",
-      "description": "Contributing to high-scale backend services and system architecture. Implementing robust APIs and ensuring seamless integration between services."
-    },
-    "nganGiang": {
-      "role": "Software Intern",
-      "company": "Ngân Giang Technology",
-      "description": "Focused on SIFMES project development. Specialized in C# SOAP services and 3D Point Cloud data analysis, contributing to precision engineering software."
-    }
+    "entryLabel": "Milestone",
+    "current": "Current",
+    "previous": "Previous"
   },
   "Projects": {
-    "title": "Featured Projects",
-    "teamLead": "Team Lead",
-    "manga": {
-      "title": "Smart Manga Platform",
-      "description": "An intelligent comic reader platform featuring OCR for text extraction and Text-to-Speech integration. Built with Spring Boot for the core engine and Next.js for a seamless frontend experience."
-    },
-    "imageRetrieval": {
-      "title": "Texture-Based Image Retrieval",
-      "description": "Content-based image retrieval system using Gabor filters for texture analysis. Led a team of developers to implement efficient search algorithms in C#."
-    }
-  },
-  "Skills": {
-    "title": "Technical Arsenal",
-    "languages": "Languages",
-    "frameworks": "Frameworks",
-    "tools": "Tools & Infra"
-  },
-  "Education": {
-    "title": "Education",
-    "university": "Thuỷ Lợi University",
-    "degree": "Bachelor of Information Systems",
-    "badge": "Graduated with Distinction",
-    "gpa": "GPA: 3.27 / 4.0",
-    "scholarship": "Excellence Scholarship Recipient"
+    "projectPreview": "Project Preview",
+    "techStack": "Tech Stack",
+    "viewCaseStudy": "View Case Study",
+    "noPublicLink": "No public link"
   },
   "Contact": {
     "title": "Get In Touch",
@@ -78,10 +59,25 @@
     "emailPlaceholder": "john@example.com",
     "messageLabel": "Message",
     "messagePlaceholder": "Your message...",
-    "send": "Send Message"
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully. Thanks, I will get back to you within 24-48 hours.",
+    "errorTryAgain": "Unable to send your message right now. Please try again in a few minutes.",
+    "errorRateLimited": "Too many requests. Please wait a few minutes and try again.",
+    "errorServiceUnavailable": "Contact service is temporarily unavailable. Please email me directly.",
+    "errorCheckFields": "Please review the highlighted fields and try again.",
+    "nameRequired": "Please enter your name.",
+    "emailRequired": "Please enter your email address.",
+    "emailInvalid": "Please provide a valid email address.",
+    "messageRequired": "Please add a message.",
+    "messageMinLength": "Message should be at least 10 characters."
   },
   "Footer": {
-    "copyright": "© 2024 Nguyễn Kim Thi. All rights reserved. Built with precision.",
-    "env": "ENVIRONMENT: PRODUCTION"
+    "copyright": "© 2026 Nguyen Kim Thi. All rights reserved. Built with precision.",
+    "quickLinks": "Quick Links",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "backToTop": "Back to top"
   }
 }

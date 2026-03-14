@@ -5,22 +5,26 @@
    Motion-Driven Minimalism
    ============================================ */
 
-/* ─── Light Mode (Default) ─── */
+/* ─── Dark Theme (Default) ─── */
 :root {
   /* Colors */
-  --color-background: #fafafa;
-  --color-surface: #ffffff;
-  --color-surface-hover: #f4f4f5;
-  --color-border: #e4e4e7;
-  --color-border-hover: #d4d4d8;
-  --color-text-primary: #09090b;
-  --color-text-secondary: #3f3f46;
-  --color-text-muted: #71717a;
-  --color-text-placeholder: #a1a1aa;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-light: #dbeafe;
-  --color-primary-glow: rgba(37, 99, 235, 0.15);
+  --color-background: #09090b;
+  --color-surface: #18181b;
+  --color-surface-hover: #27272a;
+  --color-border: #27272a;
+  --color-border-hover: #3f3f46;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+  --color-text-placeholder: #71717a;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-primary-light: #1e3a5f;
+  --color-primary-glow: rgba(59, 130, 246, 0.2);
+  --color-accent: #3abff8;
+  --color-accent-contrast: #0a0a0f;
+  --color-accent-soft: rgba(58, 191, 248, 0.1);
+  --color-accent-border: rgba(58, 191, 248, 0.25);
 
   /* Gradients */
   --gradient-text: linear-gradient(
@@ -30,18 +34,15 @@
     #ec4899 100%
   );
   --gradient-accent: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  --gradient-glass: rgba(255, 255, 255, 0.7);
+  --gradient-glass: rgba(24, 24, 27, 0.7);
 
   /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md:
-    0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg:
-    0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-  --shadow-xl:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 24px rgba(59, 130, 246, 0.2);
 
   /* Typography */
   --font-heading: "Space Grotesk", system-ui, sans-serif;
@@ -129,6 +130,10 @@
   --color-primary-hover: #60a5fa;
   --color-primary-light: #1e3a5f;
   --color-primary-glow: rgba(59, 130, 246, 0.2);
+  --color-accent: #3abff8;
+  --color-accent-contrast: #0a0a0f;
+  --color-accent-soft: rgba(58, 191, 248, 0.12);
+  --color-accent-border: rgba(58, 191, 248, 0.3);
 
   --gradient-glass: rgba(24, 24, 27, 0.7);
 
@@ -150,6 +155,10 @@
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
   --color-primary-light: var(--color-primary-light);
+  --color-accent: var(--color-accent);
+  --color-accent-contrast: var(--color-accent-contrast);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-accent-border: var(--color-accent-border);
   --color-muted: var(--color-text-muted);
   --color-secondary: var(--color-text-secondary);
 
@@ -327,6 +336,83 @@ pre {
   background: rgba(255, 255, 255, 0.1);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+/* ─── Shared UI Utilities ─── */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.accent-soft {
+  background-color: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  min-height: 44px;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(58, 191, 248, 0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  min-height: 44px;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent-border);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ui-input {
+  width: 100%;
+  background: color-mix(in srgb, var(--color-background) 88%, black 12%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  padding: 0.75rem;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.ui-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(58, 191, 248, 0.25);
+}
+
+.ui-input[data-invalid="true"] {
+  border-color: rgb(244 63 94 / 0.9);
+  box-shadow: 0 0 0 2px rgb(244 63 94 / 0.25);
+}
+
+.status-chip {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 /* ─── Typing cursor blink ─── */

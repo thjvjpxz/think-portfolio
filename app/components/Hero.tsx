@@ -7,6 +7,10 @@ export default function Hero() {
   const t = useTranslations("Hero");
   const words = t.raw("words") as string[];
   const displayText = useTypingAnimation(words);
+  const highlights = t.raw("highlights") as Array<{
+    label: string;
+    value: string;
+  }>;
 
   return (
     <section
@@ -21,16 +25,16 @@ export default function Hero() {
         {/* Left: Text content */}
         <div className="space-y-8 z-10">
           <div>
-            <h2 className="text-[#3abff8] font-mono mb-4 flex items-center gap-2">
-              <span className="w-8 h-px bg-[#3abff8]" />
+            <h2 className="text-accent font-mono mb-4 flex items-center gap-2">
+              <span className="w-8 h-px bg-[color:var(--color-accent)]" />
               {t("greeting")}
             </h2>
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6">
-              {t("headline")} <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3abff8] to-blue-400">
+              {t("headline")} <br className="hidden lg:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[color:var(--color-accent)] to-blue-400">
                 {displayText}
               </span>
-              <span className="inline-block w-0.5 h-[1em] bg-[#3abff8] ml-1 align-middle animate-[blink_1s_step-end_infinite]" />
+              <span className="inline-block w-0.5 h-[1em] bg-[color:var(--color-accent)] ml-1 align-middle animate-[blink_1s_step-end_infinite]" />
             </h1>
             <p className="text-slate-400 text-lg max-w-lg leading-relaxed">
               {t("description")}
@@ -39,16 +43,65 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="px-8 py-3 bg-[#3abff8] text-[#0a0a0f] font-semibold rounded-[8px] hover:shadow-[0_0_20px_rgba(58,191,248,0.4)] transition-all"
+              className="btn-primary px-8 py-3 font-semibold inline-flex items-center"
             >
               {t("viewProjects")}
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 glass-card rounded-[8px] font-semibold hover:bg-white/5 transition-all"
+              className="btn-secondary px-8 py-3 font-semibold inline-flex items-center"
             >
               {t("contactMe")}
             </a>
+          </div>
+          <div className="lg:hidden relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#3abff8]/40 to-purple-500/40 rounded-lg blur opacity-20 group-hover:opacity-45 transition duration-700" />
+            <div className="relative glass-card rounded-[8px] overflow-hidden transition-transform duration-300 group-hover:-translate-y-0.5">
+              <div className="terminal-header px-4 py-2 flex items-center gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+                <span className="text-xs text-slate-400 font-mono ml-2">
+                  {t("terminalTitle")}
+                </span>
+              </div>
+              <div className="px-4 py-4 font-mono text-xs leading-relaxed space-y-2">
+                <div className="flex gap-2">
+                  <span className="text-accent">➜</span>
+                  <span className="text-purple-400">~/developer</span>
+                  <span className="text-slate-500">whoami</span>
+                </div>
+                <div className="text-slate-300">
+                  {`{ "name": "${t("terminalName")}" }`}
+                </div>
+                <div className="text-slate-300">
+                  {`{ "role": "${t("terminalRole")}", "location": "${t("terminalLocation")}" }`}
+                </div>
+                <div className="text-slate-400">
+                  {`[${t("terminalSkill1")}, ${t("terminalSkill2")}, ${t("terminalSkill3")}]`}
+                </div>
+                <div className="flex gap-2 items-center">
+                  <span className="text-accent">➜</span>
+                  <span className="text-purple-400">~/developer</span>
+                  <span className="animate-pulse inline-block w-1.5 h-3 bg-[color:var(--color-accent)] align-middle ml-1" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-2">
+            {highlights.map((item) => (
+              <div
+                key={item.label}
+                className="glass-card rounded-[8px] px-4 py-3"
+              >
+                <p className="text-xl font-bold text-white leading-tight">
+                  {item.value}
+                </p>
+                <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+                  {item.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -61,41 +114,42 @@ export default function Hero() {
               <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
               <div className="w-3 h-3 rounded-full bg-green-500/50" />
               <span className="text-xs text-slate-500 font-mono ml-4">
-                thjvjpxz — -zsh — 80x24
+                {t("terminalTitle")}
               </span>
             </div>
             <div className="p-6 font-mono text-sm leading-relaxed">
               <div className="flex gap-3">
-                <span className="text-[#3abff8]">➜</span>
+                <span className="text-accent">➜</span>
                 <span className="text-purple-400">~/developer</span>
                 <span className="text-slate-500">git status</span>
               </div>
               <div className="mt-2 text-slate-400">{t("terminalBranch")}</div>
               <div className="mt-1 text-slate-400">{t("terminalUpToDate")}</div>
               <div className="mt-4 flex gap-3">
-                <span className="text-[#3abff8]">➜</span>
+                <span className="text-accent">➜</span>
                 <span className="text-purple-400">~/developer</span>
                 <span className="text-slate-500">whoami</span>
               </div>
               <div className="mt-2 text-slate-300">
                 {`{`}
                 <br />
-                &nbsp;&nbsp;&quot;name&quot;: &quot;Nguyễn Kim Thi&quot;,
+                &nbsp;&nbsp;&quot;name&quot;: &quot;{t("terminalName")}&quot;,
                 <br />
-                &nbsp;&nbsp;&quot;role&quot;: &quot;Backend Engineer&quot;,
+                &nbsp;&nbsp;&quot;role&quot;: &quot;{t("terminalRole")}&quot;,
                 <br />
-                &nbsp;&nbsp;&quot;location&quot;: &quot;Vietnam&quot;,
+                &nbsp;&nbsp;&quot;location&quot;: &quot;{t("terminalLocation")}
+                &quot;,
                 <br />
-                &nbsp;&nbsp;&quot;skills&quot;: [&quot;Java&quot;,
-                &quot;Spring Boot&quot;, &quot;Laravel&quot;,
-                &quot;Docker&quot;]
+                &nbsp;&nbsp;&quot;skills&quot;: [&quot;{t("terminalSkill1")}
+                &quot;, &quot;{t("terminalSkill2")}&quot;, &quot;
+                {t("terminalSkill3")}&quot;, &quot;{t("terminalSkill4")}&quot;]
                 <br />
                 {`}`}
               </div>
               <div className="mt-4 flex gap-3">
-                <span className="text-[#3abff8]">➜</span>
+                <span className="text-accent">➜</span>
                 <span className="text-purple-400">~/developer</span>
-                <span className="animate-pulse inline-block w-2 h-4 bg-[#3abff8] align-middle ml-1" />
+                <span className="animate-pulse inline-block w-2 h-4 bg-[color:var(--color-accent)] align-middle ml-1" />
               </div>
             </div>
           </div>
