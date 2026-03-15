@@ -10,10 +10,12 @@
     "experience": "Kinh nghiệm",
     "projects": "Dự án",
     "skills": "Kỹ năng",
-    "hireMe": "Liên hệ",
+    "contact": "Liên hệ",
+    "hireMe": "Tuyển dụng",
     "openMenu": "Mở menu điều hướng",
     "closeMenu": "Đóng menu điều hướng",
-    "navigationAria": "Điều hướng chính"
+    "navigationAria": "Điều hướng chính",
+    "switchLocale": "Chuyển sang {locale}"
   },
   "Hero": {
     "greeting": "Xin chào, tôi là Nguyễn Kim Thi",
@@ -37,6 +39,8 @@
     "terminalSkill2": "Spring Boot",
     "terminalSkill3": "Laravel",
     "terminalSkill4": "Docker",
+    "terminalFocus": "Microservices, REST APIs, Thiết kế Database",
+    "availableForWork": "Sẵn sàng nhận việc",
     "highlights": [
       { "label": "Năm kinh nghiệm", "value": "2+" },
       { "label": "Dự án đã làm", "value": "12+" },
