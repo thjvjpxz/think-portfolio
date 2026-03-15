@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { IconMenu } from "./icons";
 
 const SECTION_IDS = [
   "hero",
@@ -154,21 +155,7 @@ export default function Navbar() {
               aria-controls="mobile-navigation"
               aria-expanded={mobileMenuOpen}
             >
-              <svg
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {mobileMenuOpen ? (
-                  <path d="M18 6L6 18M6 6l12 12" />
-                ) : (
-                  <path d="M4 7h16M4 12h16M4 17h16" />
-                )}
-              </svg>
+              <IconMenu open={mobileMenuOpen} className="w-5 h-5" />
             </button>
           </div>
         </div>
