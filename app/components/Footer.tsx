@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { IconArrowUp } from "./icons";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -34,19 +35,7 @@ export default function Footer() {
           className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent/50 transition-colors"
           aria-label={t("backToTop")}
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M5 15l7-7 7 7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            />
-          </svg>
+          <IconArrowUp />
         </a>
       </div>
     </footer>
