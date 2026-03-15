@@ -10,10 +10,12 @@
     "experience": "Experience",
     "projects": "Projects",
     "skills": "Skills",
+    "contact": "Contact",
     "hireMe": "Hire Me",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
-    "navigationAria": "Primary navigation"
+    "navigationAria": "Primary navigation",
+    "switchLocale": "Switch to {locale}"
   },
   "Hero": {
     "greeting": "Hi, I am Nguyen Kim Thi",
@@ -37,6 +39,8 @@
     "terminalSkill2": "Spring Boot",
     "terminalSkill3": "Laravel",
     "terminalSkill4": "Docker",
+    "terminalFocus": "Microservices, REST APIs, Database Design",
+    "availableForWork": "Available for work",
     "highlights": [
       { "label": "Years Experience", "value": "2+" },
       { "label": "Projects Built", "value": "12+" },
