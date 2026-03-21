@@ -4,9 +4,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getBaseUrl } from "@/lib/site-url";
 import "../globals.css";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+const baseUrl = getBaseUrl();
 
 const dmSans = DM_Sans({
   variable: "--font-body",

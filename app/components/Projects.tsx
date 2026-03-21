@@ -2,7 +2,6 @@
 
 import React from "react";
 import type { PortfolioData, ProjectItem } from "@/data/types";
-import { useTranslations } from "next-intl";
 import {
   IconBook,
   IconGraduationCap,
@@ -36,8 +35,6 @@ interface ProjectsProps {
 }
 
 export default function Projects({ data }: ProjectsProps) {
-  const t = useTranslations("Projects");
-
   return (
     <section id="projects" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
