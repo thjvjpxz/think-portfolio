@@ -1,239 +1,243 @@
 import type { PortfolioData } from "./types";
 
 export const enPortfolioData: PortfolioData = {
-  about: {
-    title: "About Me",
-    paragraphs: [
-      "I am a product-minded Backend Developer focused on building server-side systems that are stable, secure, and scalable as real usage grows.",
-      "From Java/Spring Boot and PHP (Laravel, CakePHP) to FastAPI, I typically own API design, data modeling, authentication flows, and containerized delivery so teams can ship consistently from local to production.",
-      "Across my public GitHub projects, I prioritize clear architecture, clean code, and disciplined engineering workflows with linting/testing to solve problems like OCR/TTS, AI-powered exam generation, WordPress automation, and Gemini-integrated learning platforms.",
+  hero: {
+    role: "PHP / Backend Developer",
+    summary: "Backend Developer with 2+ years of experience maintaining, upgrading, and integrating backend systems.",
+    facts: [
+      "2+ years experience",
+      "CakePHP 2.x -> 5.x",
+      "Queue / Scheduler",
+      "Data sync & database locks"
     ],
-    stats: [
-      { value: "2+", label: "Professional Experience" },
-      { value: "12+", label: "Projects Completed" },
-      { value: "3.27", label: "University GPA" },
-      { value: "Good", label: "Graduation Class" },
-    ],
+    contactLinks: {
+      github: "https://github.com/thjvjpxz",
+      email: "mailto:thi12a3qv2@gmail.com",
+      cv: "/api/cv?locale=en"
+    }
   },
-  projects: {
-    title: "Featured Projects",
-    items: [
+  capabilities: {
+    title: "Capabilities",
+    blocks: [
       {
-        id: "smart-manga-platform",
-        title: "Smart Manga Website Platform with OCR and TTS",
-        description:
-          "Independently built a complete website using Java Spring Boot (Backend) and Next.js (Frontend). Integrated intelligent features: OCR for extracting dialogue from images and TTS for converting text into speech.",
-        tags: ["#Spring Boot", "#Next.js", "#OCR", "#Text-to-Speech"],
-        icon: "book",
-        accentTextClass: "text-[#3abff8]",
-        accentBgClass: "bg-[#3abff8]/10",
-        links: [
-          {
-            href: "https://github.com/thjvjpxz/webtoonnkt",
-            ariaLabel:
-              "Open Smart Manga Website Platform with OCR and TTS project",
-          },
-        ],
-        metaLabel: "Full-stack Developer",
+        title: "Legacy migration & Regression risk",
+        evidencePoints: [
+          "Hands-on experience migrating legacy CakePHP 2.x systems to 5.x.",
+          "Analyzed impact scopes and resolved old logic bugs to mitigate regression risks.",
+          "Ensured compatibility for core business flows post-migration."
+        ]
       },
       {
-        id: "personal-finance-app",
-        title: "Personal Finance App (Flutter, Offline-first)",
-        description:
-          "This project was built with a vibe coding approach to accelerate MVP delivery: I used AI to speed up scaffolding, then manually reviewed architecture and stabilized critical data flows. Developed a cross-platform personal finance mobile app with Flutter, using Riverpod for state management, Drift (SQLite) for offline-first local storage, and Supabase for authentication/cloud features. Added navigation with go_router, data visualization with charts, and CSV export/sharing utilities.",
-        tags: [
-          "#Flutter",
-          "#Dart",
-          "#Riverpod",
-          "#SQLite",
-          "#Drift",
-          "#Supabase",
-          "#go_router",
-          "#Mobile App",
-        ],
-        icon: "wallet",
-        accentTextClass: "text-lime-400",
-        accentBgClass: "bg-lime-500/10",
-        links: [
-          {
-            href: "https://github.com/thjvjpxz/personal_finance_app",
-            ariaLabel: "Open Personal Finance App repository",
-          },
-        ],
-        metaLabel: "Flutter Developer",
+        title: "Backend operations & Automation",
+        evidencePoints: [
+          "Developed Laravel scheduled jobs and queue workers for email automation.",
+          "Managed job states, implemented retry mechanisms, and detailed logging.",
+          "Built stable operational flows that are easy to monitor in production."
+        ]
       },
       {
-        id: "auto-gen-test-exam",
-        title: "Auto Gen Test Exam (AI-Powered Exam Generator)",
-        description:
-          "This is a vibe-coded full-stack AI project: I used AI to accelerate implementation, then focused on API quality, module structure, and production readiness. The backend uses FastAPI (Python) to orchestrate Gemini API and expose REST endpoints, while the frontend is built with Next.js. The project includes a Git-based CI/CD workflow and is currently deployed with the frontend on Vercel and the backend on Render, plus local development support via Docker Compose and Makefile for setup, testing, and linting.",
-        tags: [
-          "#FastAPI",
-          "#Next.js",
-          "#Gemini API",
-          "#Docker Compose",
-          "#Full-stack",
-        ],
-        icon: "sparkles",
-        accentTextClass: "text-emerald-400",
-        accentBgClass: "bg-emerald-500/10",
-        links: [
-          {
-            href: "https://github.com/thjvjpxz/auto-gen-test-exam",
-            ariaLabel: "Open Auto Gen Test Exam repository",
-          },
-        ],
-        metaLabel: "Full-stack Developer",
-      },
-      {
-        id: "wp-update-video-to-youtube",
-        title: "WordPress: Auto Update/Sync Videos to YouTube",
-        description:
-          "Developed a WordPress-based solution (PHP-focused) to automate updating/syncing video content to YouTube. The project is containerized with Docker Compose for quick local setup, and includes a workflow to install plugin dependencies via Composer inside wp-content/plugins.",
-        tags: [
-          "#WordPress",
-          "#PHP",
-          "#Docker Compose",
-          "#Composer",
-          "#Automation",
-        ],
-        icon: "video",
-        accentTextClass: "text-red-400",
-        accentBgClass: "bg-red-500/10",
-        links: [
-          {
-            href: "https://github.com/thjvjpxz/wp-update-video-to-youtube",
-            ariaLabel: "Open wp-update-video-to-youtube repository",
-          },
-        ],
-        metaLabel: "WordPress Developer",
-      },
-      {
-        id: "edusmart-htkdtm-final",
-        title: "EduSmart – AI-Powered Learning Assistant Platform",
-        description:
-          "Built a full-stack web application for personalized learning support. Frontend is developed with Next.js (App Router) + TypeScript + Tailwind CSS + shadcn/ui and uses NextAuth for authentication. Backend is implemented with FastAPI, SQLAlchemy ORM, JWT auth, and OpenAPI/Swagger documentation, with Google Gemini AI integrated to power the AI chat and learning features.",
-        tags: [
-          "#Next.js",
-          "#TypeScript",
-          "#FastAPI",
-          "#PostgreSQL",
-          "#JWT",
-          "#NextAuth",
-          "#Gemini AI",
-          "#TailwindCSS",
-        ],
-        icon: "graduation-cap",
-        accentTextClass: "text-sky-400",
-        accentBgClass: "bg-sky-500/10",
-        links: [
-          {
-            href: "https://github.com/thjvjpxz/htkdtm-final",
-            ariaLabel: "Open EduSmart (htkdtm-final) repository",
-          },
-        ],
-        metaLabel: "Team Leader",
-      },
-      {
-        id: "texture-image-retrieval",
-        title: "Texture-Based Image Search System",
-        description:
-          "Led the team in planning and developing the application as a major coursework project. Directly implemented image-processing algorithms using C# WinForms and built Gabor filters for feature extraction.",
-        tags: ["#C-Sharp", "#WinForms", "#Gabor Filters", "#Image Processing"],
-        icon: "search",
-        accentTextClass: "text-purple-400",
-        accentBgClass: "bg-purple-500/10",
-        metaLabel: "Team Leader",
-      },
-    ],
+        title: "API, Database & Data sync",
+        evidencePoints: [
+          "Designed REST APIs and optimized data synchronization between systems (e.g., PLC to SQL Server).",
+          "Applied database locks, retries, and logging to protect data integrity.",
+          "Proficient in SQL queries, schema analysis, and handling data constraints."
+        ]
+      }
+    ]
   },
   experience: {
     title: "Work Experience",
     items: [
       {
         id: "kaopiz-software",
-        role: "Backend Developer",
         company: "Kaopiz Software",
+        role: "Backend Developer",
         period: "10/2025 - Present",
-        description:
-          "Currently working on a CakePHP upgrade project and an internal AI initiative to streamline tester workflows.",
-        tags: [
-          "Laravel",
-          "CakePHP",
-          "Next.js",
-          "Flask",
-          "Docker",
-          "Database",
-          "API",
-          "AI",
+        responsibilities: [
+          "Upgrading legacy CakePHP 2.x system to 5.x, ensuring business logic compatibility.",
+          "Building automated email reminder workflows using Laravel scheduled jobs and queues.",
+          "Developing an internal AI testing and data synchronization tool using UI, cronjobs, and webhooks."
         ],
-        active: true,
+        stack: ["PHP", "CakePHP", "Laravel", "Python", "Flask", "React", "PostgreSQL", "Docker"],
+        active: true
       },
       {
         id: "ngan-giang-technology",
+        company: "NGAN GIANG TECHNOLOGY TRADING AND DEVELOPMENT CO., LTD",
         role: "Software Engineer",
-        company: "OE- GALAXY CO., LTD",
         period: "11/2023 - 05/2025",
-        description:
-          "Contributed to two distinct projects: SIFMES built with Laravel and a LiDAR project implemented with Windows Forms.",
-        tags: ["Laravel", "Windows Forms", "C#"],
-        active: false,
+        responsibilities: [
+          "Developed production management modules for the SIFMES system.",
+          "Built a SOAP Service for automated data synchronization from PLCs to SQL Server.",
+          "Handled percentage completion logic across phases/stations and displayed it on the UI."
+        ],
+        stack: ["PHP", "Laravel", "C#", "SOAP", "SQL Server"],
+        active: false
+      }
+    ]
+  },
+  professionalProjects: {
+    title: "Professional Work",
+    items: [
+      {
+        id: "ai-testing-tool",
+        name: "Internal AI Testing & Data Sync Tool",
+        period: "04/2026 - Present",
+        company: "Kaopiz Software",
+        role: "Full-stack Developer",
+        description: "Internal tool to support AI testing and synchronize data between two systems via UI, periodic cronjobs, and webhooks.",
+        stack: ["Python", "Flask", "React", "PostgreSQL", "Docker"],
+        highlights: [
+          "Designed the data mapping flow.",
+          "Managed synchronization states, database locks, retries, and logging to ensure data integrity."
+        ]
       },
-    ],
+      {
+        id: "cakephp-migration",
+        name: "Legacy CakePHP 2.x to 5.x Migration",
+        period: "10/2025 - 04/2026",
+        company: "Kaopiz Software",
+        role: "Full-stack Developer",
+        description: "Upgraded a legacy backend system from CakePHP 2.x to 5.x, ensuring core business flows remained compatible.",
+        stack: ["PHP", "CakePHP", "SQL", "Git"],
+        highlights: [
+          "Migrated screens and controllers.",
+          "Investigated logic bugs from version 2.x, analyzed impact scopes, and performed smoke tests to reduce regression risks."
+        ]
+      },
+      {
+        id: "laravel-email-automation",
+        name: "Email Automation via Laravel Scheduled Jobs & Queues",
+        period: "10/2025 - 11/2025",
+        company: "Kaopiz Software",
+        role: "Backend Developer",
+        description: "Built an automated email reminder flow to support system operations.",
+        stack: ["PHP", "Laravel", "Scheduler/Cron", "Queue", "Database", "Logging"],
+        highlights: [
+          "Developed scheduled commands and dispatched jobs via queues.",
+          "Managed delivery states, retries, and error logs for operational monitoring."
+        ]
+      },
+      {
+        id: "sifmes-plc-sync",
+        name: "SIFMES Production Management & PLC Data Sync",
+        period: "11/2023 - 05/2025",
+        company: "Ngan Giang",
+        role: "Software Engineer",
+        description: "Developed a production management module and a data synchronization flow from devices to the management system.",
+        stack: ["PHP", "Laravel", "C#", "SOAP", "SQL Server"],
+        highlights: [
+          "Handled percentage completion logic across phases/stations.",
+          "Built a SOAP Service to sync data from PLCs to SQL Server and track progress on the UI."
+        ]
+      }
+    ]
+  },
+  publicProjects: {
+    title: "Public Code Samples (GitHub)",
+    items: [
+      {
+        id: "auto-gen-test-exam",
+        title: "Auto Gen Test Exam",
+        description: "AI-based exam generation app (FastAPI/Gemini/Next.js) with CI/CD pipeline and Docker Compose.",
+        tags: ["FastAPI", "Next.js", "Gemini", "Docker"],
+        githubUrl: "https://github.com/thjvjpxz/auto-gen-test-exam",
+        icon: "sparkles",
+        accentTextClass: "text-emerald-500",
+        accentBgClass: "bg-emerald-50"
+      },
+      {
+        id: "nen-tang-manga-thong-minh",
+        title: "Smart Manga Platform (OCR & TTS)",
+        description: "Full-stack web app extracting dialog from manga images and reading them aloud (Spring Boot/Next.js).",
+        tags: ["Spring Boot", "Next.js", "OCR", "TTS"],
+        githubUrl: "https://github.com/thjvjpxz/webtoonnkt",
+        icon: "book",
+        accentTextClass: "text-blue-500",
+        accentBgClass: "bg-blue-50"
+      },
+      {
+        id: "wp-update-video-to-youtube",
+        title: "WordPress Auto-Sync YouTube",
+        description: "PHP/WordPress automation flow to upload and sync videos to YouTube.",
+        tags: ["WordPress", "PHP", "Docker"],
+        githubUrl: "https://github.com/thjvjpxz/wp-update-video-to-youtube",
+        icon: "video",
+        accentTextClass: "text-red-500",
+        accentBgClass: "bg-red-50"
+      },
+      {
+        id: "edusmart",
+        title: "EduSmart",
+        description: "Personalized learning platform integrated with Gemini AI (FastAPI, JWT, Next.js).",
+        tags: ["FastAPI", "Next.js", "PostgreSQL"],
+        githubUrl: "https://github.com/thjvjpxz/htkdtm-final",
+        icon: "graduation-cap",
+        accentTextClass: "text-sky-500",
+        accentBgClass: "bg-sky-50"
+      },
+      {
+        id: "personal-finance-app",
+        title: "Personal Finance App",
+        description: "Offline-first Flutter mobile app for personal finance using Drift (SQLite) and Supabase.",
+        tags: ["Flutter", "SQLite", "Supabase"],
+        githubUrl: "https://github.com/thjvjpxz/personal_finance_app",
+        icon: "wallet",
+        accentTextClass: "text-lime-600",
+        accentBgClass: "bg-lime-50"
+      },
+      {
+        id: "truy-xuat-anh-theo-ket-cau",
+        title: "Texture-based Image Retrieval",
+        description: "Image processing algorithm in C# WinForms using Gabor filters for feature extraction.",
+        tags: ["C#", "WinForms", "Gabor"],
+        icon: "search",
+        accentTextClass: "text-purple-500",
+        accentBgClass: "bg-purple-50"
+      }
+    ]
   },
   skills: {
-    title: "Technical Arsenal",
+    title: "Skills",
     categories: [
       {
         id: "languages",
-        title: "Languages",
-        items: ["Java", "PHP", "Python", "TypeScript", "SQL", "C#"],
+        title: "Languages & Frameworks",
+        items: ["PHP (Laravel, CakePHP)", "Java (Spring Boot)", "Python (Flask)", "TypeScript (Next.js)", "C#"]
       },
       {
-        id: "frameworks",
-        title: "Frameworks & Platforms",
-        items: [
-          "Spring Boot",
-          "Laravel",
-          "CakePHP",
-          "FastAPI",
-          "Next.js",
-          "Flutter",
-          "Riverpod",
-          "Windows Forms",
-        ],
+        id: "databases",
+        title: "Databases",
+        items: ["SQL Server", "MySQL", "PostgreSQL", "SQL queries & indexing", "Database locks"]
+      },
+      {
+        id: "systems",
+        title: "Systems & API",
+        items: ["RESTful API", "Scheduled jobs", "Queue jobs & workers", "Data synchronization", "SOAP"]
       },
       {
         id: "tools",
-        title: "Tools & Infra",
-        items: [
-          "Docker",
-          "Docker Compose",
-          "Git / GitHub",
-          "MySQL",
-          "PostgreSQL",
-          "Supabase",
-          "Drift (SQLite)",
-          "Postman",
-          "Makefile",
-        ],
-      },
-    ],
+        title: "Tools & Infrastructure",
+        items: ["Docker / Compose", "Git / GitHub", "Postman", "Linux / Shell", "Makefile"]
+      }
+    ]
   },
   education: {
     title: "Education",
     university: "Thuy Loi University",
-    degree: "Faculty of Information Technology / Major in Information Systems",
+    degree: "Information Systems",
     period: "2021 - 2025",
-    badge: "Graduated with Good classification",
+    badge: "Good",
     achievements: [
       "Cumulative GPA: 3.27/4.0",
-      "Excellent scholarship, Semester II, Academic Year 2022-2023",
-    ],
+      "Excellent Scholarship (Semester II, 2022-2023)"
+    ]
   },
   contact: {
     email: "thi12a3qv2@gmail.com",
+    phone: "0369.219.100",
+    website: "https://kimthi1708.id.vn",
     githubUrl: "https://github.com/thjvjpxz",
-    githubText: "github.com/thjvjpxz",
-  },
+    githubText: "github.com/thjvjpxz"
+  }
 };

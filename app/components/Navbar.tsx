@@ -8,7 +8,7 @@ import { IconMenu } from "./icons";
 
 const SECTION_IDS = [
   "hero",
-  "about",
+  "capabilities",
   "experience",
   "projects",
   "skills",
@@ -71,20 +71,21 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: "#about", label: t("about") },
+    { href: "#capabilities", label: t("capabilities") },
     { href: "#experience", label: t("experience") },
-    { href: "#projects", label: t("projects") },
+    { href: "#projects", label: t("professionalWork") },
     { href: "#skills", label: t("skills") },
   ];
+  const cvUrl = `/api/cv?locale=${currentLocale}`;
 
   const isSectionActive = (href: string) =>
     activeSection === href.replace("#", "");
 
   return (
     <nav
-      className={`sticky top-0 w-full z-50 border-b transition-all duration-300 ${
+      className={`sticky top-0 w-full z-50 transition-all duration-300 border-b ${
         scrolled || mobileMenuOpen
-          ? "border-white/8 bg-[#0a0a0f]/80 backdrop-blur-md"
+          ? "border-border bg-surface/90 backdrop-blur-md"
           : "border-transparent bg-transparent"
       }`}
       aria-label={t("navigationAria")}
@@ -93,9 +94,9 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <a
             href="#hero"
-            className="font-mono text-accent font-bold text-xl min-h-11 inline-flex items-center tracking-tight"
+            className="font-heading text-primary font-bold text-xl min-h-11 inline-flex items-center tracking-tight"
           >
-            &lt;THINK /&gt;
+            Nguyen Kim Thi
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -107,8 +108,8 @@ export default function Navbar() {
                   aria-current={isSectionActive(href) ? "page" : undefined}
                   className={`text-sm font-medium transition-colors min-h-11 inline-flex items-center ${
                     isSectionActive(href)
-                      ? "text-accent"
-                      : "text-slate-300 hover:text-accent"
+                      ? "text-primary"
+                      : "text-secondary hover:text-primary"
                   }`}
                 >
                   {label}
@@ -118,22 +119,26 @@ export default function Navbar() {
                 href="#contact"
                 className={`text-sm font-medium transition-colors min-h-11 inline-flex items-center ${
                   isSectionActive("#contact")
-                    ? "text-accent"
-                    : "text-slate-300 hover:text-accent"
+                    ? "text-primary"
+                    : "text-secondary hover:text-primary"
                 }`}
               >
                 {t("contact")}
               </a>
             </div>
+            
             <a
-              href="#contact"
-              className="h-10 px-6 inline-flex items-center justify-center rounded-lg bg-accent text-[#0a0a0f] text-sm font-bold shadow-[0_0_15px_rgba(58,191,248,0.4)] hover:shadow-[0_0_25px_rgba(58,191,248,0.6)] transition-all"
+              href={cvUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-9 px-4 inline-flex items-center justify-center rounded-md bg-primary text-white text-sm font-medium hover:bg-primary-hover transition-colors shadow-sm"
             >
-              {t("hireMe")}
+              {t("downloadCV")}
             </a>
+            
             <button
               onClick={switchLocale}
-              className="h-10 px-3 border border-white/8 text-slate-400 rounded-lg hover:border-accent/50 hover:text-accent transition-all font-mono text-xs uppercase tracking-widest cursor-pointer"
+              className="h-9 px-3 border border-border text-secondary rounded-md hover:border-primary hover:text-primary transition-colors font-mono text-xs uppercase cursor-pointer"
               aria-label={t("switchLocale", { locale: otherLocale })}
             >
               {otherLocale}
@@ -143,14 +148,14 @@ export default function Navbar() {
           <div className="flex lg:hidden items-center gap-2">
             <button
               onClick={switchLocale}
-              className="min-h-11 min-w-11 px-3 border border-white/8 text-slate-400 rounded-lg hover:border-accent/50 hover:text-accent transition-all font-mono text-xs uppercase tracking-widest cursor-pointer"
+              className="min-h-10 min-w-10 px-2 border border-border text-secondary rounded-md hover:border-primary hover:text-primary transition-colors font-mono text-xs uppercase cursor-pointer flex items-center justify-center"
               aria-label={t("switchLocale", { locale: otherLocale })}
             >
               {otherLocale}
             </button>
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg border border-white/8 text-slate-300 hover:border-accent/50 hover:text-accent transition-colors cursor-pointer"
+              className="min-h-10 min-w-10 inline-flex items-center justify-center rounded-md border border-border text-secondary hover:border-primary hover:text-primary transition-colors cursor-pointer"
               aria-label={mobileMenuOpen ? t("closeMenu") : t("openMenu")}
               aria-controls="mobile-navigation"
               aria-expanded={mobileMenuOpen}
@@ -164,13 +169,13 @@ export default function Navbar() {
           <div className="lg:hidden fixed inset-0 top-16 z-40">
             <button
               type="button"
-              className="absolute inset-0 bg-[#0a0a0f]/70 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/20 backdrop-blur-sm"
               onClick={() => setMobileMenuOpen(false)}
               aria-label={t("closeMenu")}
             />
             <div
               id="mobile-navigation"
-              className="relative mx-4 mt-3 rounded-xl border border-white/8 bg-[#0a0a0f]/95 backdrop-blur-md p-3 shadow-xl"
+              className="relative mx-4 mt-3 rounded-xl border border-border bg-surface p-3 shadow-xl"
             >
               <div className="flex flex-col gap-1 text-sm font-medium">
                 {navLinks.map(({ href, label }) => (
@@ -179,10 +184,10 @@ export default function Navbar() {
                     href={href}
                     onClick={() => setMobileMenuOpen(false)}
                     aria-current={isSectionActive(href) ? "page" : undefined}
-                    className={`min-h-11 px-3 rounded-lg flex items-center transition-colors ${
+                    className={`min-h-11 px-3 rounded-md flex items-center transition-colors ${
                       isSectionActive(href)
-                        ? "text-accent bg-accent/10"
-                        : "text-slate-300 hover:text-accent hover:bg-white/5"
+                        ? "text-primary bg-primary-light/50"
+                        : "text-secondary hover:text-primary hover:bg-surface-hover"
                     }`}
                   >
                     {label}
@@ -191,9 +196,22 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="mt-2 min-h-11 px-3 rounded-lg inline-flex items-center justify-center bg-accent text-[#0a0a0f] font-bold shadow-[0_0_15px_rgba(58,191,248,0.3)] transition-all"
+                  className={`min-h-11 px-3 rounded-md flex items-center transition-colors ${
+                    isSectionActive("#contact")
+                      ? "text-primary bg-primary-light/50"
+                      : "text-secondary hover:text-primary hover:bg-surface-hover"
+                  }`}
                 >
-                  {t("hireMe")}
+                  {t("contact")}
+                </a>
+                <a
+                  href={cvUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="mt-2 min-h-11 px-3 rounded-md inline-flex items-center justify-center bg-primary text-white font-medium hover:bg-primary-hover transition-colors shadow-sm"
+                >
+                  {t("downloadCV")}
                 </a>
               </div>
             </div>

@@ -1,14 +1,6 @@
 "use client";
 
-import React from "react";
 import type { PortfolioData } from "@/data/types";
-import { IconCode, IconCog, IconCube } from "./icons";
-
-const CATEGORY_ICONS: Record<string, React.ReactNode> = {
-  languages: <IconCode className="w-5 h-5 text-accent" />,
-  frameworks: <IconCube className="w-5 h-5 text-accent" />,
-  tools: <IconCog className="w-5 h-5 text-accent" />,
-};
 
 interface SkillsProps {
   data: PortfolioData["skills"];
@@ -16,30 +8,27 @@ interface SkillsProps {
 
 export default function Skills({ data }: SkillsProps) {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-24 relative bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl font-bold text-slate-100">{data.title}</h2>
+          <h2 className="text-3xl font-bold text-slate-900">{data.title}</h2>
           <div className="section-line" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {data.categories.map((category) => (
             <div key={category.id} className="flex flex-col gap-4">
-              <h3 className="text-xl font-bold text-slate-100 flex items-center gap-2">
-                {CATEGORY_ICONS[category.id] ?? CATEGORY_ICONS.tools}
+              <h3 className="text-lg font-semibold text-primary font-heading border-b border-border pb-2">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <ul className="space-y-2">
                 {category.items.map((item) => (
-                  <span
-                    key={item}
-                    className="px-4 py-2 rounded-full glass-card text-slate-300 text-sm font-mono hover:border-accent/50 hover:text-accent transition-colors"
-                  >
+                  <li key={item} className="text-slate-700 text-sm flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
                     {item}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

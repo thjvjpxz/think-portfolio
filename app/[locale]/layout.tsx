@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, DM_Sans, Space_Grotesk } from "next/font/google";
+import { Be_Vietnam_Pro, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -9,17 +9,10 @@ import "../globals.css";
 
 const baseUrl = getBaseUrl();
 
-const dmSans = DM_Sans({
+const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-body",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -94,10 +87,9 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale}>
       <body
-        className={`${dmSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
-        style={{ backgroundColor: "#0a0a0f", color: "#e2e8f0" }}
+        className={`${beVietnamPro.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
