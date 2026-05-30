@@ -4,17 +4,11 @@ import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import { getPortfolioData } from "@/data";
 
-const About = dynamic(() => import("@/app/components/About"), { ssr: true });
-const Experience = dynamic(() => import("@/app/components/Experience"), {
-  ssr: true,
-});
-const Projects = dynamic(() => import("@/app/components/Projects"), {
-  ssr: true,
-});
+const CapabilityBrief = dynamic(() => import("@/app/components/CapabilityBrief"), { ssr: true });
+const Experience = dynamic(() => import("@/app/components/Experience"), { ssr: true });
+const Projects = dynamic(() => import("@/app/components/Projects"), { ssr: true });
 const Skills = dynamic(() => import("@/app/components/Skills"), { ssr: true });
-const Education = dynamic(() => import("@/app/components/Education"), {
-  ssr: true,
-});
+const Education = dynamic(() => import("@/app/components/Education"), { ssr: true });
 const Contact = dynamic(() => import("@/app/components/Contact"), {
   ssr: true,
 });
@@ -35,14 +29,18 @@ async function JsonLd({ locale }: { locale: string }) {
     email: "thi12a3qv2@gmail.com",
     sameAs: ["https://github.com/thjvjpxz"],
     knowsAbout: [
-      "Java",
-      "Spring Boot",
-      "Laravel",
       "PHP",
+      "Laravel",
+      "CakePHP",
+      "REST API",
+      "SQL Server",
+      "MySQL",
+      "PostgreSQL",
       "Docker",
-      "FastAPI",
-      "Next.js",
-      "CakePHP"
+      "scheduled jobs",
+      "queue jobs",
+      "database locks",
+      "data synchronization"
     ],
   };
 
@@ -81,10 +79,10 @@ export default async function HomePage({
       <JsonLd locale={locale} />
       <Navbar />
       <main id="main-content">
-        <Hero />
-        <About data={portfolioData.about} />
+        <Hero data={portfolioData.hero} />
+        <CapabilityBrief data={portfolioData.capabilities} />
         <Experience data={portfolioData.experience} />
-        <Projects data={portfolioData.projects} />
+        <Projects professionalData={portfolioData.professionalProjects} publicData={portfolioData.publicProjects} />
         <Skills data={portfolioData.skills} />
         <Education data={portfolioData.education} />
         <Contact data={portfolioData.contact} />

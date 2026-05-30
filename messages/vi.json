@@ -1,67 +1,51 @@
 {
   "Metadata": {
-    "title": "Nguyễn Kim Thi | Backend Developer Portfolio",
-    "description": "Backend Developer chuyên về Java Spring Boot, Laravel PHP, Docker. Xây dựng hệ thống backend hiệu suất cao và kiến trúc có khả năng mở rộng.",
+    "title": "Nguyễn Kim Thi | PHP / Backend Developer",
+    "description": "Backend Developer chuyên về PHP, Laravel, CakePHP, REST APIs, databases, scheduled jobs, queues, và đồng bộ dữ liệu.",
     "ogLocale": "vi_VN",
     "jobTitle": "Kỹ sư Backend"
   },
   "Navbar": {
-    "about": "Giới thiệu",
+    "capabilities": "Năng lực",
     "experience": "Kinh nghiệm",
-    "projects": "Dự án",
+    "professionalWork": "Dự án",
     "skills": "Kỹ năng",
     "contact": "Liên hệ",
-    "hireMe": "Tuyển dụng",
-    "openMenu": "Mở menu điều hướng",
-    "closeMenu": "Đóng menu điều hướng",
+    "downloadCV": "Tải CV",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
     "navigationAria": "Điều hướng chính",
     "switchLocale": "Chuyển sang {locale}"
   },
   "Hero": {
-    "greeting": "Xin chào, tôi là Nguyễn Kim Thi",
-    "headline": "Kỹ thuật",
-    "words": [
-      "Backend Developer",
-      "Java Spring Boot",
-      "Laravel PHP",
-      "Cake PHP"
-    ],
-    "description": "Xây dựng backend vững chắc và kiến trúc mở rộng theo nhu cầu sản phẩm. Chuyên về Java, PHP và FastAPI hiệu suất cao với trọng tâm là clean code, API rõ ràng và kỷ luật kỹ thuật.",
-    "viewProjects": "Xem dự án",
+    "greeting": "Nguyễn Kim Thi",
+    "headline": "PHP / Backend Developer",
     "contactMe": "Liên hệ",
-    "terminalBranch": "On branch master",
-    "terminalUpToDate": "Your branch is up to date with 'origin/master'.",
-    "terminalTitle": "thjvjpxz — -zsh — 80x24",
-    "terminalName": "Nguyễn Kim Thi",
-    "terminalRole": "Kỹ sư Backend",
-    "terminalLocation": "Việt Nam",
-    "terminalSkill1": "Java",
-    "terminalSkill2": "Spring Boot",
-    "terminalSkill3": "Laravel",
-    "terminalSkill4": "Docker",
-    "terminalFocus": "Microservices, REST APIs, Thiết kế Database",
-    "availableForWork": "Sẵn sàng nhận việc",
-    "highlights": [
-      { "label": "Năm kinh nghiệm", "value": "2+" },
-      { "label": "Dự án đã làm", "value": "12+" },
-      { "label": "Stack chính", "value": "Java · PHP" }
-    ]
+    "downloadCV": "Tải CV",
+    "github": "GitHub",
+    "engineeringBrief": "Tóm tắt chuyên môn"
+  },
+  "Capabilities": {
+    "title": "Năng lực chuyên môn"
   },
   "Experience": {
-    "entryLabel": "Cột mốc",
+    "title": "Kinh nghiệm làm việc",
     "current": "Hiện tại",
     "previous": "Trước đó"
   },
   "Projects": {
-    "projectPreview": "Tổng quan dự án",
+    "professionalTitle": "Dự án chuyên nghiệp",
+    "publicTitle": "Mã nguồn công khai (GitHub Samples)",
     "techStack": "Công nghệ",
-    "viewCaseStudy": "Xem Case Study",
-    "noPublicLink": "Không có link công khai"
+    "role": "Vai trò",
+    "viewOnGithub": "Xem trên GitHub"
   },
   "Contact": {
     "title": "Liên hệ",
-    "description": "Tôi luôn sẵn sàng thảo luận về các dự án mới, ý tưởng sáng tạo hoặc cơ hội trở thành một phần trong tầm nhìn của bạn.",
+    "description": "Tôi luôn sẵn sàng trao đổi về công việc, hệ thống backend và các cơ hội hợp tác mới.",
     "emailLabel": "Gửi email",
+    "phoneLabel": "Số điện thoại",
+    "websiteLabel": "Trang web",
     "githubLabel": "GitHub",
     "nameLabel": "Họ tên",
     "namePlaceholder": "Nguyễn Văn A",
@@ -71,7 +55,7 @@
     "messagePlaceholder": "Nội dung tin nhắn...",
     "send": "Gửi tin nhắn",
     "sending": "Đang gửi...",
-    "successMessage": "Gửi tin nhắn thành công. Cảm ơn bạn, tôi sẽ phản hồi trong vòng 24-48 giờ.",
+    "successMessage": "Gửi tin nhắn thành công. Cảm ơn bạn, tôi sẽ phản hồi sớm nhất có thể.",
     "errorTryAgain": "Hiện chưa thể gửi tin nhắn. Vui lòng thử lại sau vài phút.",
     "errorRateLimited": "Bạn gửi quá nhiều lần. Vui lòng chờ vài phút rồi thử lại.",
     "errorServiceUnavailable": "Dịch vụ liên hệ đang tạm gián đoạn. Vui lòng gửi email trực tiếp cho tôi.",
@@ -83,11 +67,10 @@
     "messageMinLength": "Tin nhắn cần có ít nhất 10 ký tự."
   },
   "Footer": {
-    "copyright": "© 2026 Nguyễn Kim Thi. Bảo lưu mọi quyền. Được xây dựng với sự tỉ mỉ.",
-    "quickLinks": "Liên kết nhanh",
-    "about": "Giới thiệu",
+    "copyright": "© 2026 Nguyễn Kim Thi. Bảo lưu mọi quyền.",
+    "backToTop": "Lên đầu trang",
+    "capabilities": "Năng lực",
     "projects": "Dự án",
-    "contact": "Liên hệ",
-    "backToTop": "Lên đầu trang"
+    "contact": "Liên hệ"
   }
 }

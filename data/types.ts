@@ -8,59 +8,59 @@ export type ProjectIcon =
   | "graduation-cap"
   | "wallet";
 
-export interface ProjectLink {
-  href: string;
-  ariaLabel: string;
+export interface HeroContent {
+  role: string;
+  summary: string;
+  facts: string[];
+  contactLinks: {
+    github: string;
+    email: string;
+    cv: string;
+  };
 }
 
-export interface ProjectItem {
-  id: string;
+export interface CapabilityContent {
   title: string;
-  description: string;
-  tags: string[];
-  icon: ProjectIcon;
-  accentTextClass: string;
-  accentBgClass: string;
-  metaLabel?: string;
-  links?: ProjectLink[];
+  summary?: string;
+  evidencePoints: string[];
 }
 
 export interface ExperienceItem {
   id: string;
-  role: string;
   company: string;
+  role: string;
   period: string;
+  responsibilities: string[];
+  stack: string[];
+  active?: boolean;
+}
+
+export interface ProfessionalProjectItem {
+  id: string;
+  name: string;
+  period: string;
+  company: string;
+  role: string;
+  description: string;
+  stack: string[];
+  highlights: string[];
+}
+
+export interface PublicProjectItem {
+  id: string;
+  title: string;
   description: string;
   tags: string[];
-  active: boolean;
-}
-
-export interface ContactContent {
-  email: string;
-  githubUrl: string;
-  githubText: string;
-}
-
-export interface AboutStat {
-  value: string;
-  label: string;
-}
-
-export interface AboutContent {
-  title: string;
-  paragraphs: string[];
-  stats: AboutStat[];
+  githubUrl?: string;
+  icon?: ProjectIcon;
+  accentTextClass?: string;
+  accentBgClass?: string;
 }
 
 export interface SkillCategory {
   id: string;
   title: string;
   items: string[];
-}
-
-export interface SkillsContent {
-  title: string;
-  categories: SkillCategory[];
 }
 
 export interface EducationContent {
@@ -72,17 +72,36 @@ export interface EducationContent {
   achievements: string[];
 }
 
+export interface ContactContent {
+  email: string;
+  phone: string;
+  website: string;
+  githubUrl: string;
+  githubText: string;
+}
+
 export interface PortfolioData {
-  about: AboutContent;
-  projects: {
+  hero: HeroContent;
+  capabilities: {
     title: string;
-    items: ProjectItem[];
+    blocks: CapabilityContent[];
   };
   experience: {
     title: string;
     items: ExperienceItem[];
   };
-  skills: SkillsContent;
+  professionalProjects: {
+    title: string;
+    items: ProfessionalProjectItem[];
+  };
+  publicProjects: {
+    title: string;
+    items: PublicProjectItem[];
+  };
+  skills: {
+    title: string;
+    categories: SkillCategory[];
+  };
   education: EducationContent;
   contact: ContactContent;
 }

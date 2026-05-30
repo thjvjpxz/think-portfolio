@@ -1,67 +1,51 @@
 {
   "Metadata": {
-    "title": "Nguyen Kim Thi | Backend Developer Portfolio",
-    "description": "Backend Developer specializing in Java Spring Boot, Laravel PHP, Docker. Building high-performance backend systems and scalable architectures.",
+    "title": "Nguyen Kim Thi | PHP / Backend Developer",
+    "description": "Backend Developer focused on PHP, Laravel, CakePHP, REST APIs, databases, scheduled jobs, queues, and data synchronization.",
     "ogLocale": "en_US",
     "jobTitle": "Backend Developer"
   },
   "Navbar": {
-    "about": "About",
+    "capabilities": "Capabilities",
     "experience": "Experience",
-    "projects": "Projects",
+    "professionalWork": "Work",
     "skills": "Skills",
     "contact": "Contact",
-    "hireMe": "Hire Me",
-    "openMenu": "Open navigation menu",
-    "closeMenu": "Close navigation menu",
+    "downloadCV": "Download CV",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "navigationAria": "Primary navigation",
     "switchLocale": "Switch to {locale}"
   },
   "Hero": {
-    "greeting": "Hi, I am Nguyen Kim Thi",
-    "headline": "Engineering",
-    "words": [
-      "Backend Developer",
-      "Java Spring Boot",
-      "Laravel PHP",
-      "Cake PHP"
-    ],
-    "description": "Building robust backends and product-scale architectures. Specializing in high-performance Java, PHP, and FastAPI systems with a focus on clean code, clear APIs, and engineering discipline.",
-    "viewProjects": "View Projects",
+    "greeting": "Nguyen Kim Thi",
+    "headline": "PHP / Backend Developer",
     "contactMe": "Contact Me",
-    "terminalBranch": "On branch master",
-    "terminalUpToDate": "Your branch is up to date with 'origin/master'.",
-    "terminalTitle": "thjvjpxz — -zsh — 80x24",
-    "terminalName": "Nguyen Kim Thi",
-    "terminalRole": "Backend Engineer",
-    "terminalLocation": "Vietnam",
-    "terminalSkill1": "Java",
-    "terminalSkill2": "Spring Boot",
-    "terminalSkill3": "Laravel",
-    "terminalSkill4": "Docker",
-    "terminalFocus": "Microservices, REST APIs, Database Design",
-    "availableForWork": "Available for work",
-    "highlights": [
-      { "label": "Years Experience", "value": "2+" },
-      { "label": "Projects Built", "value": "12+" },
-      { "label": "Core Stack", "value": "Java · PHP" }
-    ]
+    "downloadCV": "Download CV",
+    "github": "GitHub",
+    "engineeringBrief": "Engineering Brief"
+  },
+  "Capabilities": {
+    "title": "Capabilities"
   },
   "Experience": {
-    "entryLabel": "Milestone",
+    "title": "Work Experience",
     "current": "Current",
     "previous": "Previous"
   },
   "Projects": {
-    "projectPreview": "Project Preview",
+    "professionalTitle": "Professional Work",
+    "publicTitle": "Public Code Samples (GitHub)",
     "techStack": "Tech Stack",
-    "viewCaseStudy": "View Case Study",
-    "noPublicLink": "No public link"
+    "role": "Role",
+    "viewOnGithub": "View on GitHub"
   },
   "Contact": {
     "title": "Get In Touch",
-    "description": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+    "description": "I'm always open to discussing backend roles, system maintenance, and API/data integration projects.",
     "emailLabel": "Email Me",
+    "phoneLabel": "Phone",
+    "websiteLabel": "Website",
     "githubLabel": "GitHub",
     "nameLabel": "Name",
     "namePlaceholder": "John Doe",
@@ -71,7 +55,7 @@
     "messagePlaceholder": "Your message...",
     "send": "Send Message",
     "sending": "Sending...",
-    "successMessage": "Message sent successfully. Thanks, I will get back to you within 24-48 hours.",
+    "successMessage": "Message sent successfully. Thanks, I will get back to you shortly.",
     "errorTryAgain": "Unable to send your message right now. Please try again in a few minutes.",
     "errorRateLimited": "Too many requests. Please wait a few minutes and try again.",
     "errorServiceUnavailable": "Contact service is temporarily unavailable. Please email me directly.",
@@ -83,11 +67,10 @@
     "messageMinLength": "Message should be at least 10 characters."
   },
   "Footer": {
-    "copyright": "© 2026 Nguyen Kim Thi. All rights reserved. Built with precision.",
-    "quickLinks": "Quick Links",
-    "about": "About",
+    "copyright": "© 2026 Nguyen Kim Thi. All rights reserved.",
+    "backToTop": "Back to top",
+    "capabilities": "Capabilities",
     "projects": "Projects",
-    "contact": "Contact",
-    "backToTop": "Back to top"
+    "contact": "Contact"
   }
 }
