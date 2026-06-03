@@ -19,11 +19,12 @@
   },
   "Hero": {
     "greeting": "Nguyen Kim Thi",
-    "headline": "PHP / Backend Developer",
+    "headline": "handles migrations, queues, and data sync.",
     "contactMe": "Contact Me",
     "downloadCV": "Download CV",
     "github": "GitHub",
-    "engineeringBrief": "Engineering Brief"
+    "engineeringBrief": "Highlights",
+    "primaryMetric": "Experience"
   },
   "Capabilities": {
     "title": "Capabilities"

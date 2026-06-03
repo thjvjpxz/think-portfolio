@@ -3,12 +3,13 @@ import type { PortfolioData } from "./types";
 export const viPortfolioData: PortfolioData = {
   hero: {
     role: "PHP / Backend Developer",
-    summary: "Hơn 2 năm kinh nghiệm bảo trì, nâng cấp và tích hợp các hệ thống backend.",
+    summary: "Backend developer tập trung vào hệ thống PHP legacy, automation vận hành và luồng dữ liệu cần độ tin cậy cao.",
     facts: [
       "2+ năm kinh nghiệm",
-      "CakePHP 2.x -> 5.x",
-      "Queue / Scheduler",
-      "Đồng bộ dữ liệu & Database locks"
+      "Nâng cấp CakePHP 2.x -> 5.x",
+      "Queue & Scheduler Laravel",
+      "Đồng bộ PLC -> SQL Server",
+      "Database locks & Retry logic"
     ],
     contactLinks: {
       github: "https://github.com/thjvjpxz",
@@ -49,17 +50,28 @@ export const viPortfolioData: PortfolioData = {
     title: "Kinh nghiệm làm việc",
     items: [
       {
+        id: "ntq-solution",
+        company: "NTQ Solution JSC.",
+        role: "Backend Developer",
+        period: "06/2026 - Hiện tại",
+        responsibilities: [
+          "Gia nhập NTQ Solution từ 06/2026 trong vai trò Backend Developer."
+        ],
+        stack: ["PHP", "Laravel", "SQL", "Docker"],
+        active: true
+      },
+      {
         id: "kaopiz-software",
         company: "Kaopiz Software",
         role: "Backend Developer",
-        period: "10/2025 - Hiện tại",
+        period: "10/2025 - 05/2026",
         responsibilities: [
           "Nâng cấp hệ thống legacy CakePHP 2.x lên 5.x, đảm bảo tương thích logic nghiệp vụ.",
           "Xây dựng luồng gửi email nhắc nhở tự động bằng Laravel scheduled jobs và queue.",
           "Phát triển công cụ nội bộ hỗ trợ kiểm thử AI và đồng bộ dữ liệu qua UI, cronjob, webhook."
         ],
         stack: ["PHP", "CakePHP", "Laravel", "Python", "Flask", "React", "PostgreSQL", "Docker"],
-        active: true
+        active: false
       },
       {
         id: "ngan-giang-technology",
@@ -82,7 +94,7 @@ export const viPortfolioData: PortfolioData = {
       {
         id: "ai-testing-tool",
         name: "Công cụ nội bộ hỗ trợ kiểm thử AI & đồng bộ dữ liệu",
-        period: "04/2026 - Hiện tại",
+        period: "04/2026 - 05/2026",
         company: "Kaopiz Software",
         role: "Full-stack Developer",
         description: "Công cụ nội bộ hỗ trợ kiểm thử AI và đồng bộ dữ liệu giữa hai hệ thống qua UI, cronjob định kỳ và webhook.",
