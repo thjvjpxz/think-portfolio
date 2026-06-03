@@ -25,6 +25,11 @@ async function JsonLd({ locale }: { locale: string }) {
     "@type": "Person",
     name: "Nguyễn Kim Thi",
     jobTitle: t("jobTitle"),
+    worksFor: {
+      "@type": "Organization",
+      name: "NTQ Solution JSC.",
+      url: "https://ntq.com.vn/",
+    },
     url,
     email: "thi12a3qv2@gmail.com",
     sameAs: ["https://github.com/thjvjpxz"],

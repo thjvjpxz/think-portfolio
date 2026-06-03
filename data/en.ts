@@ -3,12 +3,13 @@ import type { PortfolioData } from "./types";
 export const enPortfolioData: PortfolioData = {
   hero: {
     role: "PHP / Backend Developer",
-    summary: "Backend Developer with 2+ years of experience maintaining, upgrading, and integrating backend systems.",
+    summary: "Backend developer focused on PHP legacy systems, operations automation, and reliable data flows.",
     facts: [
       "2+ years experience",
-      "CakePHP 2.x -> 5.x",
-      "Queue / Scheduler",
-      "Data sync & database locks"
+      "CakePHP 2.x -> 5.x Migration",
+      "Laravel Queue & Scheduler",
+      "PLC -> SQL Server Synchronization",
+      "Database locks & Retry logic"
     ],
     contactLinks: {
       github: "https://github.com/thjvjpxz",
@@ -49,17 +50,28 @@ export const enPortfolioData: PortfolioData = {
     title: "Work Experience",
     items: [
       {
+        id: "ntq-solution",
+        company: "NTQ Solution JSC.",
+        role: "Backend Developer",
+        period: "06/2026 - Present",
+        responsibilities: [
+          "Joined NTQ Solution in 06/2026 as a Backend Developer."
+        ],
+        stack: ["PHP", "Laravel", "SQL", "Docker"],
+        active: true
+      },
+      {
         id: "kaopiz-software",
         company: "Kaopiz Software",
         role: "Backend Developer",
-        period: "10/2025 - Present",
+        period: "10/2025 - 05/2026",
         responsibilities: [
           "Upgrading legacy CakePHP 2.x system to 5.x, ensuring business logic compatibility.",
           "Building automated email reminder workflows using Laravel scheduled jobs and queues.",
           "Developing an internal AI testing and data synchronization tool using UI, cronjobs, and webhooks."
         ],
         stack: ["PHP", "CakePHP", "Laravel", "Python", "Flask", "React", "PostgreSQL", "Docker"],
-        active: true
+        active: false
       },
       {
         id: "ngan-giang-technology",
@@ -82,7 +94,7 @@ export const enPortfolioData: PortfolioData = {
       {
         id: "ai-testing-tool",
         name: "Internal AI Testing & Data Sync Tool",
-        period: "04/2026 - Present",
+        period: "04/2026 - 05/2026",
         company: "Kaopiz Software",
         role: "Full-stack Developer",
         description: "Internal tool to support AI testing and synchronize data between two systems via UI, periodic cronjobs, and webhooks.",

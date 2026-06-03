@@ -19,11 +19,12 @@
   },
   "Hero": {
     "greeting": "Nguyễn Kim Thi",
-    "headline": "PHP / Backend Developer",
+    "headline": "xử lý migration, queue và đồng bộ dữ liệu.",
     "contactMe": "Liên hệ",
     "downloadCV": "Tải CV",
     "github": "GitHub",
-    "engineeringBrief": "Tóm tắt chuyên môn"
+    "engineeringBrief": "Nổi bật",
+    "primaryMetric": "Kinh nghiệm"
   },
   "Capabilities": {
     "title": "Năng lực chuyên môn"
